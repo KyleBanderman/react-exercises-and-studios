@@ -1,5 +1,18 @@
+import styles from './styling.css'
+import recipeData from './recipe.json'
+
+let recipeAuthor = <div key={recipeData[1].author}>{recipeData[1].author}</div>;
+let recipeAuthorImage = <img src={recipeData[1].authorImage} alt={recipeData[1].author} className="authorImage"/>
+let recipeWebsite = <a href={recipeData[1].website}>Website</a>;
+
 function AuthorInfo() {
-   return;
+   return (
+    <div>
+      {recipeAuthor}
+      {recipeAuthorImage}
+      {recipeWebsite}
+    </div>
+   );
  }
  
  export default AuthorInfo;
